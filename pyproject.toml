@@ -1,0 +1,29 @@
+[project]
+name = "redes-neuronales"
+version = "0.1.0"
+description = "Neural networks practice with MNIST and Fashion-MNIST"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter",
+    "numpy",
+    "matplotlib",
+    "tensorflow-cpu",
+    "scikit-learn>=1.9.1",
+]
+
+[dependency-groups]
+dev = [
+    "nbstripout",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+artifacts = []
+force-include = {}
+
+[tool.uv]
+package = false
