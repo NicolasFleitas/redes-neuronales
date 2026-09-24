@@ -2,6 +2,15 @@
 
 Repositorio de práctica con redes neuronales sobre MNIST y Fashion-MNIST (TensorFlow / Keras).
 
+## Introducción
+
+Práctica introductoria de redes densas (MLP) para clasificación de imágenes de 28x28.
+
+- **Objetivo:** entrenar la misma red simple (784 → 128 → 10) en dos datasets y comparar qué cambia.
+- **Experimentos:** ReLU vs Sigmoid y Adam vs SGD, con los mismos hiperparámetros (5 epochs, batch 128, lr 0.001).
+- **Resultado:** la ganadora es ReLU + Adam en ambos casos, con ~97% en MNIST y ~86.6% en Fashion-MNIST. La ropa cuesta más porque las clases se solapan (camisa/remera, suéter/abrigo).
+- **Idea clave:** una densa de 1 capa ya resuelve dígitos, pero al aplanar píxeles pierde formas locales; por eso confunde trazos o prendas parecidas, donde una CNN rendiría mejor.
+
 ## Requisitos
 
 - Python 3.12
